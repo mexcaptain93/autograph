@@ -1,0 +1,29 @@
+header.header 
+    .header__top
+        .container
+            .header__logo 
+                a(href="#")
+                    img(src="/static/img/svg/sprite.svg#logo" alt="Автограф")
+            .header__buttons 
+                .header__btn
+                    a(href="#") 
+                        img(src="/static/img/svg/sprite.svg#header-plus", alt="Сотрудничество")
+                .header__btn 
+                    a(href="#")
+                        img(src="/static/img/svg/sprite.svg#header-filter", alt="Категории") 
+                .header__btn
+                    a(href="#")
+                        img(src="/static/img/svg/sprite.svg#header-burger", alt="Меню") 
+    .header__search
+        .container 
+            .search 
+                form.search__form(method="POST" action="search.php") 
+                    .search__label 
+                        span Поиск
+                    .search__input 
+                        input(type="text")
+                    .search__submit 
+                        input(type="submit")
+                    .search__reset 
+                        input(type="reset")
+            

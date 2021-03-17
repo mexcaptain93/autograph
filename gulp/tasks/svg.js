@@ -8,7 +8,7 @@ module.exports = function() {
             }))
             .pipe($.gp.cheerio({
                 run: function($) {
-                    $('[fill]').removeAttr('fill');
+                    // $('[fill]').removeAttr('fill');
                     $('[stroke]').removeAttr('stroke');
                     $('[style]').removeAttr('style');
                 },
@@ -17,8 +17,8 @@ module.exports = function() {
             .pipe($.gp.replace('&gt;', '>'))
             .pipe($.gp.svgSprite({
                 mode: {
-                    symbol: {
-                        sprite: "sprite.svg"
+                    stack: {
+                        sprite: "../sprite.svg"
                     }
                 }
             }))

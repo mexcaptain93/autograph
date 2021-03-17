@@ -1,0 +1,99 @@
+.header
+    padding-top 12px
+    padding-bottom 12px
+
+    font-family 'Montserrat', sans-serif
+
+    &__top
+        padding-bottom 12px
+        margin-bottom 12px
+        border-bottom 1px solid alpha($white, 10%)
+
+
+        & > .container
+            display flex
+            flex-wrap wrap 
+            align-items center
+            justify-content space-between
+
+    &__logo
+        width 85px
+
+    &__buttons
+        display flex
+    
+    &__btn
+        width 28px
+        height 25px
+        margin-right 8px
+
+        &:last-child
+            margin-right 0
+
+        a 
+            display block
+            width 100%
+            height 100%
+
+        img 
+            object-fit cover
+            width 100%
+            height 100%
+
+    &__search 
+        flex-grow 1
+        
+
+.search 
+    width 100%
+    background-color $gray
+    padding 10px 8px
+    border-radius 8px
+
+    &__form 
+        display flex
+        align-items center
+
+    &__label 
+        padding-right 8px
+        border-right 1px solid $gray_light
+
+        color $gray_light
+        font-size 16px
+        line-height 21px
+        font-weight 500
+
+    &__input
+        flex-grow 1
+
+        input 
+            width 100%
+            background-color transparent
+            appearance none
+            border none
+            padding-left 10px
+            padding-right 10px
+            
+            color: $white
+
+    &__submit
+        display none
+
+    &__reset
+        display flex
+
+        input 
+            font-size 0
+            line-height 0
+            background-color transparent 
+            appearance none 
+            border none
+            display inline-block
+            padding 0
+
+            width 16px
+            height 15px
+            background-image url("../img/svg/sprite.svg#search-clean")
+            background-position center center
+            background-size cover
+            cursor pointer
