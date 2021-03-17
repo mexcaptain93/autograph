@@ -4,7 +4,22 @@ header.header
             .header__logo 
                 a(href="#")
                     img(src="/static/img/svg/sprite.svg#logo" alt="Автограф")
-            .header__buttons 
+            .header__categories-btn 
+                a(href="#") Категории
+            .header__search 
+                .search 
+                    form.search__form(method="POST" action="search.php") 
+                        .search__label 
+                            span Поиск
+                        .search__input 
+                            input(type="text")
+                        .search__submit 
+                            input(type="submit")
+                        .search__reset 
+                            input(type="reset")
+            .header__cooperation-btn 
+                a(href="#") Сотрудничество
+            .header__tablet-buttons 
                 .header__btn
                     a(href="#") 
                         img(src="/static/img/svg/sprite.svg#header-plus", alt="Сотрудничество")
@@ -14,7 +29,7 @@ header.header
                 .header__btn
                     a(href="#")
                         img(src="/static/img/svg/sprite.svg#header-burger", alt="Меню") 
-    .header__search
+    .header__tablet-search
         .container 
             .search 
                 form.search__form(method="POST" action="search.php") 

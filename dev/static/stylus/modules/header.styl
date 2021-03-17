@@ -20,13 +20,24 @@
     &__logo
         width 85px
 
-    &__buttons
+        @media $desktop
+            margin-right 65px
+
+    &__tablet-buttons
         display flex
+
+        @media $desktop
+            display none
     
     &__btn
         width 28px
         height 25px
         margin-right 8px
+
+        &_tablet
+
+            @media $desktop 
+                display none
 
         @media $tablet
             margin-right 16px
@@ -44,15 +55,64 @@
             width 100%
             height 100%
 
-    &__search 
-        flex-grow 1
+    &__tablet-search 
+
+        @media $desktop
+            display none
         
+    &__categories-btn
+        display none
+        padding 11px 23px 10px
+        margin-right 65px
+        background-color $white
+        border-radius 5px
+        cursor pointer
+
+        font-size 14px
+        line-height 17px
+        font-weight 500
+
+        &::before 
+            content ''
+            display inline-block
+            vertical-align middle
+            width 20px
+            height 20px
+            background-image url('../img/svg/sprite.svg#header-burger')
+            background-position center center
+            background-size cover
+            margin-right 4px
+
+        @media $desktop
+            display block
+
+    &__search 
+        display none
+        flex-grow 1
+        margin-right 65px
+
+        @media $desktop
+            display block
+
+    &__cooperation-btn 
+        display none
+
+        color $white
+        font-size 14px
+        line-height 17px
+        font-weight 500
+
+        @media $desktop
+            display block
 
 .search 
     width 100%
     background-color $gray
     padding 10px 8px
-    border-radius 8px
+    border-radius 5px
+
+    @media $desktop
+        padding 11px 16px 10px
 
     &__form 
         display flex
@@ -66,6 +126,9 @@
         font-size 16px
         line-height 21px
         font-weight 500
+
+        @media $desktop 
+            padding-right 14px
 
     &__input
         flex-grow 1
@@ -97,7 +160,7 @@
 
             width 16px
             height 15px
-            background-image url("../img/svg/sprite.svg#search-clean")
+            background-image url('../img/svg/sprite.svg#search-clean')
             background-position center center
             background-size cover
             cursor pointer
