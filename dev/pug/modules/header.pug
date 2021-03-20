@@ -5,7 +5,7 @@ header.header
                 a(href="#")
                     img(src="/static/img/svg/sprite.svg#logo" alt="Автограф")
             .header__categories-btn 
-                a(href="#") Категории
+                a(href="#").js-categories-menu-open Категории
             .header__search 
                 .search 
                     form.search__form(method="POST" action="search.php") 
@@ -23,7 +23,7 @@ header.header
                 .header__btn
                     a(href="#") 
                         img(src="/static/img/svg/sprite.svg#header-plus", alt="Сотрудничество")
-                .header__btn 
+                .header__btn.js-categories-menu-open
                     a(href="#")
                         img(src="/static/img/svg/sprite.svg#header-filter", alt="Категории") 
                 .header__btn
@@ -41,15 +41,15 @@ header.header
                         input(type="submit")
                     .search__reset 
                         input(type="reset")
-    .header__categories
+    .header__categories.js-header-categories
         .categories
-            a(href="#").categories__close
-            a(href="#").categories__all-btn
+            a(href="#").categories__close.js-categories-menu-close
             .categories__wrap.scrollbar
-                .categories__group
+                .categories__group.categories__group_wide
                     .categories__heading
                         a(href="#") Актёры
-                    ul.categories__list
+                    a(href="#").categories__all-btn Смотреть всех
+                    ul.categories__list.js-categories-menu
                         li.categories__item
                             a(href="#") Кино (32)
                         li.categories__item
@@ -104,8 +104,6 @@ header.header
                             a(href="#") Телевидение (32)
                         li.categories__item
                             a(href="#") Актеры озвучивания (45)
-
-
                 .categories__group
                     .categories__heading
                         a(href="#") Спортсмены
