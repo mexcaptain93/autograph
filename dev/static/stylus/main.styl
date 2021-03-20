@@ -67,6 +67,22 @@ button
 		margin-left auto
 		margin-right auto
 
+.scrollbar
+	overflow-y: auto
+	// For FF
+	scrollbar-width thin
+	scrollbar-color $gray_light $gray3
+
+	// For other
+	&::-webkit-scrollbar
+		width: 4px
+
+		&-track
+			background $gray3
+
+		&-thumb
+			background: $gray_light
+
 
 //Модули
 @import "modules/modules.styl"

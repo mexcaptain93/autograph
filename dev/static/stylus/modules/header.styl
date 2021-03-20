@@ -164,3 +164,57 @@
             background-position center center
             background-size cover
             cursor pointer
+
+.categories
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $gray2
+    color: $white
+    padding: 64px 20px 38px 38px
+
+    &__close
+        position: absolute
+        top: 15px
+        right: 15px
+        width: 18px
+        height: 18px
+        background-image: url('../img/svg/sprite.svg#close')
+        background-position center center
+        background-size cover
+        cursor pointer
+
+    &__all-btn
+        display: inline-block
+
+    &__wrap
+        max-height 100%
+
+    &__heading
+        margin-bottom: 30px
+
+        font-size: 24px
+        line-height: 29px
+        font-weight: bold
+
+    &__group
+        margin-bottom: 30px
+
+        &:last-chlid
+            margin-bottom: 0
+
+    &__item
+        margin-bottom: 8px
+
+        color: $gray_light2
+        font-size: 16px
+        line-height: 20px
+
+        &:nth-child(3n)
+            margin-bottom: 30px
+
+        &:last-child
+            margin-bottom: 0
+
