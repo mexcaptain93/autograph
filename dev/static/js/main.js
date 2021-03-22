@@ -1,3 +1,5 @@
+catMenuOptions = {}
+
 $(document).ready(function () {
     categoriesMenuList()
 });
