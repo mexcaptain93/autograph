@@ -318,6 +318,10 @@
     margin-top: -16px
     font-family: $montserrat
 
+    @media $tablet
+        position: relative
+        margin-top: 0
+
     &__show-more
         margin-bottom: 40px
 
@@ -325,12 +329,24 @@
         line-height: 19px
         font-weight: 400
 
+        @media $tablet
+            position: absolute
+            right: 0
+            top: -64px
+            margin-bottom: 0
+
+        @media $desktop
+            top: -90px
+
     &__item
         margin-bottom: 16px
 
         font-weight: 500
         font-size: 16px
         line-height: 25px
+
+        @media $tablet
+            margin-bottom: 20px
 
         &:last-child
             margin-bottom: 0
@@ -354,6 +370,9 @@
         border-radius: 5px
         background-color: $gray2
 
+        @media $tablet
+            padding: 52px 96px 52px 18px
+
     &__toggler
         position: absolute
         right: 18px
@@ -363,6 +382,7 @@
         height: 46px
         border-radius: 50%
         border: 1px solid #828282
+        cursor: pointer
 
         &::after, &::before
             content: ''
@@ -389,6 +409,15 @@
         margin-bottom: 1px
         border: 1px solid #1D1D1D
         border-radius: 5px
+
+        @media $tablet
+            margin-bottom: 0
+            margin-top: 20px
+
+        @media $desktop
+            margin-top: 8px
+            padding: 26px 51px
+
 
 
 
