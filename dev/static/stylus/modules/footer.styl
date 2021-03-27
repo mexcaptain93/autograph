@@ -5,8 +5,20 @@
   padding-top: 16px
   padding-bottom: 16px
 
+  & > .container
+
+    @media $tablet
+      display: flex
+      align-items flex-start
+      margin-right: 30px
+
   &__logo
     margin-bottom: 20px
+
+    @media $tablet
+      margin-right: 30px
+      margin-bottom: 0
+      flex-shrink: 0
 
     img
       object-fit: cover
@@ -15,6 +27,11 @@
 
   .social
     margin-bottom: 20px
+
+    @media $tablet
+      min-width: 204px
+      margin-bottom: 0
+      padding-top: 3px
 
     &__list
       display: flex
@@ -62,6 +79,10 @@
     line-height: 14px
     color: #979797
     font-weight: 400
+
+    @media $tablet
+      padding-top: 4px
+
 
     &__list
       display: flex
