@@ -1,6 +1,7 @@
 catMenuOptions = {}
 
 $(document).ready(function () {
+    svg4everybody({});
     categoriesMenuList();
     toggleQnA();
 });
