@@ -1,0 +1,80 @@
+.footer
+  flex 0 0 auto
+  margin-top: 60px
+  border-top: 1px solid alpha($white, .1)
+  padding-top: 16px
+  padding-bottom: 16px
+
+  &__logo
+    margin-bottom: 20px
+
+    img
+      object-fit: cover
+      width: 85px
+      height: 22px
+
+  .social
+    margin-bottom: 20px
+
+    &__list
+      display: flex
+
+    &__item
+      margin-right: 16px
+
+      font-family: $roboto
+      font-size: 14px
+      line-height: 16px
+      color: #979797
+
+      &:last-child
+        margin-right: 0
+
+      &_vk
+
+        &::before
+          content: ''
+          display: inline-block
+          margin-right: 4px
+          width: 21px
+          height: 11px
+          background-position center center
+          background-size cover
+          background-image url('../img/svg/sprite.svg#vk')
+
+      &_instagram
+
+        &::before
+          content: ''
+          display: inline-block
+          position: relative
+          top: 2px
+          margin-right: 4px
+          width: 14px
+          height: 14px
+          background-position center center
+          background-size cover
+          background-image url('../img/svg/sprite.svg#instagram')
+
+  .links
+    font-family: $montserrat
+    font-size: 12px
+    line-height: 14px
+    color: #979797
+    font-weight: 400
+
+    &__list
+      display: flex
+      flex-wrap: wrap
+
+    &__item
+      margin-right: 16px
+      margin-bottom: 8px
+
+      &:last-child
+        margin-right: 0
+
+      &_light
+        color: $white
+        font-weight: 500
+
