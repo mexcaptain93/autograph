@@ -172,7 +172,6 @@
         line-height 21px
 
 .persons
-
     margin-bottom: 72px
     margin-right -16px
 
@@ -314,5 +313,83 @@
         @media $desktop
             max-width: 212px
             margin: 0 auto
+
+.qna
+    margin-top: -16px
+    font-family: $montserrat
+
+    &__show-more
+        margin-bottom: 40px
+
+        font-size: 16px
+        line-height: 19px
+        font-weight: 400
+
+    &__item
+        margin-bottom: 16px
+
+        font-weight: 500
+        font-size: 16px
+        line-height: 25px
+
+        &:last-child
+            margin-bottom: 0
+
+        &_opened
+            display: block
+
+            .qna
+                &__toggler
+
+                    &::after
+                        transform: translate(-50%, -50%) rotate(90deg)
+
+                &__answer
+                    display: block
+
+
+    &__question
+        position: relative
+        padding: 41px 75px 41px 18px
+        border-radius: 5px
+        background-color: $gray2
+
+    &__toggler
+        position: absolute
+        right: 18px
+        top: 50%
+        transform: translateY(-50%)
+        width: 46px
+        height: 46px
+        border-radius: 50%
+        border: 1px solid #828282
+
+        &::after, &::before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: #c4c4c4
+
+        &::after
+            width: 2px
+            height: 16px
+            transition: .3s transform ease
+
+        &::before
+            width: 16px
+            height: 2px
+
+    &__answer
+        display: none
+        padding: 14px 6px 14px 18px
+        margin-top: 8px
+        margin-bottom: 1px
+        border: 1px solid #1D1D1D
+        border-radius: 5px
+
+
 
 
