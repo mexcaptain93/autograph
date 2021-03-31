@@ -31,7 +31,7 @@
             width: 85px
             height: 22px
 
-    &__tablet-buttons
+    &__mobile-buttons
         display flex
 
         @media $desktop
@@ -63,7 +63,7 @@
             width 100%
             height 100%
 
-    &__tablet-search 
+    &__mobile-search
 
         @media $desktop
             display none
@@ -273,4 +273,51 @@
         font-family $roboto
         font-size 12px
         line-height 28px
+
+.mobile-menu
+    display: none
+    position: relative
+    padding: 46px 16px 16px
+    height: calc(100vh - 103px)
+    overflow-y: auto
+
+    &__heading
+        margin-bottom: 60px
+
+    &__close
+        position: absolute
+        cursor: pointer
+        top: 15px
+        right: 15px
+        background-image: url('../img/svg/sprite.svg#close')
+        width: 16px
+        height: 16px
+        background-repeat: no-repeat
+        background-position: center center
+
+    &__list
+        margin-bottom: 60px
+
+    &__item
+        margin-bottom: 30px
+
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+
+        &:last-child
+            margin-bottom: 0
+
+    .social
+        margin-right: 0
+        min-width: auto
+        padding-top: 0
+
+        &__list
+            flex-direction: column
+            align-items: flex-start
+
+        &__item
+            margin-bottom: 30px
+            margin-right: 0
 

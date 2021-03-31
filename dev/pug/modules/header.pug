@@ -19,17 +19,17 @@ header.header
                             input(type="reset")
             .header__partnership-btn.js-popup-partnership-open
                 a(href="#") Сотрудничество
-            .header__tablet-buttons 
+            .header__mobile-buttons
                 .header__btn.js-popup-partnership-open
                     a(href="#") 
                         img(src="/static/img/svg/sprite.svg#header-plus" alt="Сотрудничество")
                 .header__btn.js-categories-menu-open
                     a(href="#")
                         img(src="/static/img/svg/sprite.svg#header-filter" alt="Категории")
-                .header__btn
+                .header__btn.js-mobile-menu-open
                     a(href="#")
                         img(src="/static/img/svg/sprite.svg#header-burger" alt="Меню")
-    .header__tablet-search
+    .header__mobile-search
         .container 
             .search 
                 form.search__form(method="POST" action="search.php") 
@@ -41,6 +41,28 @@ header.header
                         input(type="submit")
                     .search__reset 
                         input(type="reset")
+    .header__mobile-menu.mobile-menu.js-mobile-menu
+        .mobile-menu__close.js-mobile-menu-close
+        .mobile-menu__heading.heading
+            span Меню
+        ul.mobile-menu__list
+            li.mobile-menu__item
+                a(href="#") Политика конфиденциальности
+            li.mobile-menu__item
+                a(href="#") Поддержка
+            li.mobile-menu__item
+                a(href="#") FAQ
+            li.mobile-menu__item
+                a(href="#") Сотрудничество
+            li.mobile-menu__item
+                a(href="#") Контакты
+        .mobile-menu__social.social
+            ul.social__list
+                li.social__item.social__item_vk
+                    a(href="#") ВКонтакте
+                li.social__item.social__item_instagram
+                    a(href="#") Instagram
+
     .header__categories.js-header-categories
         .categories
             a(href="#").categories__close.js-categories-menu-close

@@ -66,7 +66,7 @@ function toggleQnA() {
 
 function popups() {
     $('.popup__overlay, .popup__close').on('click', function (e) {
-        if (e.target == this) {
+        if (e.target === this) {
             e.preventDefault();
             $('.popup').hide();
         }
@@ -75,5 +75,16 @@ function popups() {
     $('.js-popup-partnership-open').on('click', function (e) {
         e.preventDefault();
         $('.js-popup-partnership').css({'display':'flex'});
+    });
+
+    $('.js-mobile-menu-open').on('click', function (e) {
+        e.preventDefault();
+       $('.js-mobile-menu').slideDown();
+    });
+
+
+    $('.js-mobile-menu-close').on('click', function (e) {
+        e.preventDefault();
+        $('.js-mobile-menu').slideUp();
     });
 }
