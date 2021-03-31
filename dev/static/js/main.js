@@ -4,6 +4,7 @@ $(document).ready(function () {
     svg4everybody({});
     categoriesMenuList();
     toggleQnA();
+    popups();
 });
 
 $(window).on('resize', function(){
@@ -60,5 +61,19 @@ function toggleQnA() {
         parent.toggleClass('qna__item_opened');
 
 
+    });
+}
+
+function popups() {
+    $('.popup__overlay, .popup__close').on('click', function (e) {
+        if (e.target == this) {
+            e.preventDefault();
+            $('.popup').hide();
+        }
+    });
+
+    $('.js-popup-partnership-open').on('click', function (e) {
+        e.preventDefault();
+        $('.js-popup-partnership').css({'display':'flex'});
     });
 }
