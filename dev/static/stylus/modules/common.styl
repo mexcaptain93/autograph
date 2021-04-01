@@ -50,3 +50,36 @@
         background-position center center
         background-size cover
         background-image url('../img/svg/sprite.svg#instagram')
+
+.breadcrumbs
+  margin-bottom: 30px
+
+  font-family: $montserrat
+  font-weight: 500
+  font-size: 14px
+  line-height: 17px
+  color: #BDBDBD
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    margin-right: 8px
+    margin-bottom: 8px
+
+    &::after
+      content: ''
+      display: inline-block
+      width: 6px
+      height: 6px
+      background-image: url('../img/svg/sprite.svg#breadcrumbs_delimiter')
+      background-repeat: no-repeat
+      background-position: center center
+      margin-left: 8px
+
+    &:last-child
+      color: #15D41D
+
+      &::after
+        display: none
