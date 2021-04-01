@@ -1,0 +1,39 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Том Харди'
+    - var pageClass = 'person-page'
+
+block content
+    .container
+        .breadcrumbs
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href='#') Главная
+                li.breadcrumbs__item
+                    a(href='#') Актеры
+                li.breadcrumbs__item
+                    a(href='#') Том Харди
+
+        a(href='#').banner
+            .banner__img
+                picture
+                    source(srcset="/static/img/content/tom-big.jpeg" media="(min-width: 1280px)")
+                    source(srcset="/static/img/content/tom-medium.jpeg" media="(min-width: 768px)")
+                    source(srcset="/static/img/content/tom-small.jpeg")
+                    img(srcset="/static/img/content/tom-small.jpeg" alt="Tom Hardy")
+
+
+
+        .verified
+            span Верифицированная страница
+        .heading
+            span Том Харди
+        .position
+            span Актер, Режиссер, Сценарист
+        .description
+            p Э́двард То́мас «Том» Ха́рди — английский актёр, продюсер и сценарист. Обладатель премии BAFTA и номинант на премию «Оскар». Прославился благодаря фильму «Стюарт: Прошлая жизнь», где он сыграл роль наркомана и бездомного Стюарта Шортера, принёсшую ему номинацию на премию BAFTA.
+        .order
+            a(href='#').btn Заказать автограф за 15 000 ₽
+        .video
+            iframe(src="https://www.youtube.com/embed/A8wopvEgxig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
