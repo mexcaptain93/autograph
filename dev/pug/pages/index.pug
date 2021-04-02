@@ -4,6 +4,10 @@ block variables
 	- var title = 'Главная страница'
 	- var pageClass = 'index-page'
 
+block script
+	script(src="static/js/slick.js")
+
+
 block content
 	.container 
 		a(href='#').banner 
@@ -20,7 +24,7 @@ block content
 			span Популярные категории:
 		
 		.popular
-			.popular__list 
+			.popular__list.js-slider-popular
 				a(href="#").popular__item 
 					.popular__img 
 						img(src="/static/img/content/popular-1.jpg" alt="Детективы")
@@ -51,7 +55,7 @@ block content
 			span Популярные знаменитости:
 
 		.persons-row 
-			.persons-row__list 
+			.persons-row__list.js-slider-persons-row
 				.persons-row__item 
 					a(href="#").person-card
 						.person-card__photo
@@ -97,7 +101,7 @@ block content
 			span Недавно присоединились к (название):
 
 		.persons-row
-			.persons-row__list
+			.persons-row__list.js-slider-persons-row
 				.persons-row__item
 					a(href="#").person-card
 						.person-card__photo

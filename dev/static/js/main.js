@@ -5,6 +5,7 @@ $(document).ready(function () {
     categoriesMenuList();
     toggleQnA();
     popups();
+    sliders();
 });
 
 $(window).on('resize', function(){
@@ -86,5 +87,45 @@ function popups() {
     $('.js-mobile-menu-close').on('click', function (e) {
         e.preventDefault();
         $('.js-mobile-menu').slideUp();
+    });
+}
+
+function sliders() {
+    $('.js-slider-popular').slick({
+        arrows: false,
+        slidesToShow: 5,
+
+        responsive: [
+            {
+                breakpoint: 1532,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: true,
+                    variableWidth: true,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                }
+            }
+        ]
+
+    });
+
+    $('.js-slider-persons-row').slick({
+        arrows: false,
+        slidesToShow: 4,
+
+        responsive: [
+            {
+                breakpoint: 1532,
+                settings: {
+                    slidesToShow: 1,
+                    infinite: true,
+                    variableWidth: true,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                }
+            }
+        ]
+
     });
 }

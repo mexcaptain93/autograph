@@ -81,11 +81,13 @@ button
 	overflow-y: auto
 	// For FF
 	scrollbar-width thin
+	scrollbar-height thin
 	scrollbar-color $gray_light $gray3
 
 	// For other
 	&::-webkit-scrollbar
 		width: 4px
+		height: 4px
 
 		&-track
 			background $gray3
@@ -149,7 +151,11 @@ button
 	text-transform: uppercase
 	text-align: center
 
+.slick-slide
+	outline: none
 
+// Компоненты
+@import "components/components.styl"
 
 //Модули
 @import "modules/modules.styl"
