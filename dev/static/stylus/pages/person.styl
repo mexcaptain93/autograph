@@ -9,6 +9,9 @@
     line-height: 25px
     font-weight: 500
 
+    @media $tablet
+      margin-bottom: 40px
+
 
     &::before
       content: ''
@@ -45,6 +48,9 @@
   &__order
     margin-bottom: 60px
 
+    @media $tablet
+      margin-bottom: 40px
+
   &__video
     position: relative
     aspect-ratio: 16 / 9
@@ -66,7 +72,16 @@
     .heading
       margin-bottom: 30px
 
+      @media $tablet
+        margin-bottom: 40px
+
     .info
+
+      &__list
+
+        @media $tablet
+          display: flex
+          flex-wrap: wrap
 
       &__item
         display: flex
@@ -77,13 +92,25 @@
         font-size: 14px
         line-height: 24px
 
+        @media $tablet
+          width: 50%
+          margin-bottom: 30px
+          justify-content: flex-start
+
+          font-size: 18px
+          line-height: 28px
+
+
+
         &:last-child
           margin-bottom: 0
 
       &__param
-
         color: #dadada
         font-weight: 500
+
+        @media $tablet
+          margin-right: 16px
 
       &__value
         width: 100px
@@ -94,9 +121,15 @@
   &__howto
     margin-bottom: 40px
 
+    @media $tablet
+      margin-bottom: 70px
+
   &__gallery
     margin-right: -16px
     margin-bottom: 60px
+
+    @media $tablet
+      margin-bottom: 70px
 
     .gallery
 
@@ -104,15 +137,32 @@
         width: 240px
         margin-right: 30px
 
+        @media $tablet
+          width: 227px
+
   &__form
+    margin-bottom: 20px
+
+    @media $tablet
+      margin-bottom: 30px
 
     .heading
       margin-bottom: 30px
 
     .form
 
+      &__list
+
+        @media $tablet
+          display: grid
+          grid-column-gap: 20px
+          grid-template-columns: 1fr 1fr
+
       &__block
         margin-bottom: 30px
+
+        @media $tablet
+          margin-bottom: 40px
 
         &_wide
           margin-bottom: 20px
