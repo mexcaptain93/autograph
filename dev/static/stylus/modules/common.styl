@@ -60,6 +60,9 @@
   line-height: 17px
   color: #BDBDBD
 
+  @media $desktop
+    margin-bottom: 70px
+
   &__list
     display: flex
     flex-wrap: wrap
@@ -274,17 +277,21 @@
   font-weight 700
   color $white
 
+  @media $desktop
+    margin-bottom 60px
+
+    font-size 36px
+    line-height 44px
+
   &_sub
     margin-bottom: 20px
 
     font-size: 18px
     line-height: 22px
 
-  @media $desktop
-    margin-bottom 60px
-
-    font-size 36px
-    line-height 44px
+    @media $desktop
+      font-size: 24px
+      line-height: 30px
 
 .input
   border: none
@@ -318,6 +325,7 @@
   display: block
   background-color: #1AA057
   border-radius: 5px
+  cursor: pointer
 
   font-family: $roboto
   font-weight: 500
