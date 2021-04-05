@@ -91,41 +91,57 @@ function popups() {
 }
 
 function sliders() {
-    $('.js-slider-popular').slick({
-        arrows: false,
-        slidesToShow: 5,
 
-        responsive: [
-            {
-                breakpoint: 1532,
-                settings: {
-                    slidesToShow: 1,
-                    infinite: true,
-                    variableWidth: true,
-                    autoplay: true,
-                    autoplaySpeed: 3000,
+    if ($('.js-slider-popular').length) {
+        $('.js-slider-popular').slick({
+            arrows: false,
+            slidesToShow: 5,
+
+            responsive: [
+                {
+                    breakpoint: 1532,
+                    settings: {
+                        slidesToShow: 1,
+                        infinite: true,
+                        variableWidth: true,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                    }
                 }
-            }
-        ]
+            ]
 
-    });
+        });
+    }
 
-    $('.js-slider-persons-row').slick({
-        arrows: false,
-        slidesToShow: 4,
+    if ($('.js-slider-persons-row').length) {
+        $('.js-slider-persons-row').slick({
+            arrows: false,
+            slidesToShow: 4,
 
-        responsive: [
-            {
-                breakpoint: 1532,
-                settings: {
-                    slidesToShow: 1,
-                    infinite: true,
-                    variableWidth: true,
-                    autoplay: true,
-                    autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 1532,
+                    settings: {
+                        slidesToShow: 1,
+                        infinite: true,
+                        variableWidth: true,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                    }
                 }
-            }
-        ]
+            ]
 
-    });
+        });
+    }
+
+    if ($('.js-person-gallery').length) {
+        $('.js-person-gallery').slick({
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            variableWidth: true,
+            mobileFirst: true,
+        });
+    }
 }

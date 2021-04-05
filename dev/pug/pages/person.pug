@@ -4,6 +4,9 @@ block variables
     - var title = 'Том Харди'
     - var pageClass = 'person-page'
 
+block script
+    script(src="static/js/slick.js")
+
 block content
     .container
         .breadcrumbs
@@ -15,7 +18,7 @@ block content
                 li.breadcrumbs__item
                     a(href='#') Том Харди
 
-        a(href='#').banner
+        a(href='#').person-page__banner.banner
             .banner__img
                 picture
                     source(srcset="/static/img/content/tom-big.jpeg" media="(min-width: 1280px)")
@@ -25,15 +28,75 @@ block content
 
 
 
-        .verified
+        .person-page__verified
             span Верифицированная страница
-        .heading
+        .person-page__name.heading
             span Том Харди
-        .position
+        .person-page__position
             span Актер, Режиссер, Сценарист
-        .description
+        .person-page__description
             p Э́двард То́мас «Том» Ха́рди — английский актёр, продюсер и сценарист. Обладатель премии BAFTA и номинант на премию «Оскар». Прославился благодаря фильму «Стюарт: Прошлая жизнь», где он сыграл роль наркомана и бездомного Стюарта Шортера, принёсшую ему номинацию на премию BAFTA.
-        .order
+        .person-page__order
             a(href='#').btn Заказать автограф за 15 000 ₽
-        .video
+        .person-page__video
             iframe(src="https://www.youtube.com/embed/A8wopvEgxig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        .person-page__info.info
+            .heading
+                span Информация:
+            .info__list
+                .info__item
+                    .info__param
+                        span Отзывы
+                    .info__value
+                        span 50
+                .info__item
+                    .info__param
+                        span Видеоотчёт
+                    .info__value
+                        span Возможен
+                .info__item
+                    .info__param
+                        span Срок доставки
+                    .info__value
+                        span 30 дней
+                .info__item
+                    .info__param
+                        span Фотоочтёт
+                    .info__value
+                        span Возможен
+                .info__item
+                    .info__param
+                        span Начало сотрудничества
+                    .info__value
+                        span 09.03.2021
+        .person-page__howto
+            .heading
+                span Как заказать автограф:
+            .howto
+                .howto__list
+                    .howto__item
+                        .howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-1');" )
+                        .howto__text
+                            span Заполните форму обратной связи и оплатите заказ
+                    .howto__item
+                        .howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-2');" )
+                        .howto__text
+                            span Отправьте вашу вещь в наш сортировочный центр
+                    .howto__item
+                        .howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-3');" )
+                        .howto__text
+                            span Знаменитость оставит автограф
+                    .howto__item
+                        .howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-4');" )
+                        .howto__text
+                            span Мы вернем вещь с автографом на указанный вами адрес
+        .person-page__gallery.gallery
+            .gallery__list.js-person-gallery
+                .gallery__item
+                    img(src="/static/img/content/tom-1.jpg" alt="Tom 1")
+                .gallery__item
+                    img(src="/static/img/content/tom-2.jpg" alt="Tom 2")
+                .gallery__item
+                    img(src="/static/img/content/tom-3.jpg" alt="Tom 3")
+
+
