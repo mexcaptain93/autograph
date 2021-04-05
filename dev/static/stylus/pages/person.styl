@@ -194,6 +194,9 @@
     @media $tablet
       margin-bottom: 30px
 
+    @media $desktop
+      margin-bottom: 60px
+
     .heading
       margin-bottom: 30px
 
@@ -269,5 +272,55 @@
 
         p
           margin-bottom: 15px
+
+  &__tags
+    margin-bottom: 52px
+
+    @media $tablet
+      margin-bottom: 22px
+
+    .tags
+
+      &__wrapper
+        font-family: $montserrat
+        font-weight: 500
+
+        @media $tablet
+          width: 480px
+          margin: 0 auto
+          display: flex
+
+        @media $desktop
+          width: 700px
+
+      &__heading
+        margin-bottom: 16px
+
+        font-size: 16px
+        line-height: 26px
+        color: #dadada
+
+        @media $tablet
+          margin-right: 10px
+
+        @media $desktop
+          margin-right: 16px
+
+      &__list
+        display: flex
+        flex-wrap: wrap
+
+      &__item
+        margin-right: 8px
+        padding: 4px 12px
+        border: 1px solid #333333
+        border-radius: 16px
+        margin-bottom: 8px
+
+        font-size: 12px
+        line-height: 19px
+
+        &:last-child
+          margin-right: 0
 
 
