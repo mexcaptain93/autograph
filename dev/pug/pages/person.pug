@@ -98,5 +98,40 @@ block content
                     img(src="/static/img/content/tom-2.jpg" alt="Tom 2")
                 .gallery__item
                     img(src="/static/img/content/tom-3.jpg" alt="Tom 3")
-
+        .person-page__form.form
+            .heading
+                span Оформление заявки:
+            form
+                .form__block
+                    .heading.heading_sub
+                        span Контактные данные
+                    .form__list
+                        .form__item
+                            .form__label
+                                span Ваше имя *
+                            .form__input
+                                input(type="text").input
+                        .form__item
+                            .form__label
+                                span Ваш телефон *
+                            .form__input
+                                input(type="text").input
+                        .form__item
+                            .form__label
+                                span Ваш город *
+                            .form__input
+                                input(type="text").input
+                        .form__item
+                            .form__label
+                                span Ваш Email *
+                            .form__input
+                                input(type="text").input
+                .form__block.form__block_wide
+                    .heading.heading_sub
+                        span Информация для доставки
+                    .form__item
+                        .form__input
+                            input(type="text" placeholder="Адрес доставки и/или комментарии к заказу").input
+                    .form__submit
+                        input(type="submit" value="Заказать автограф за 15 000 ₽").btn
 
