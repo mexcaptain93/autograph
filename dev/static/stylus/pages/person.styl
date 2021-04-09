@@ -323,4 +323,59 @@
         &:last-child
           margin-right: 0
 
+.reviews
+  font-family: $montserrat
+
+  .heading
+
+    @media $desktop
+      margin-bottom: 83px
+
+  &__list
+    margin-bottom: 16px
+
+    @media $tablet
+      margin-bottom: 35px
+
+    @media $desktop
+      width: 960px
+      margin: 0 auto 35px
+      max-height: 483px
+      padding-right: 35px
+
+  &__item
+    margin-bottom: 35px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 18px
+
+  &__name
+    font-weight: 700
+    font-size: 18px
+    line-height: 22px
+    color: $white
+
+  &__date
+    font-size: 15px
+    line-height: 22px
+    font-weight: 400
+    color: #828282
+
+  &__text
+    font-size: 15px
+    line-height: 27px
+    font-weight: 400
+
+  &__btn
+
+    @media $desktop
+      width: 960px
+      margin: 0 auto
+
+
 
