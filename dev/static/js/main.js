@@ -140,6 +140,7 @@ function sliders() {
             infinite: true,
             speed: 300,
             slidesToShow: 1,
+            autoplay: true,
             variableWidth: true,
             mobileFirst: true,
         });
