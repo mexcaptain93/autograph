@@ -1,0 +1,32 @@
+.not-found-page
+
+  .content
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 16px
+
+  &__404
+    width: 200px
+    aspect-ratio: 2.8
+    margin: 0 auto 40px
+    background-image: url('../img/svg/sprite.svg#404')
+    background-repeat: no-repeat
+    background-position: center center
+
+    @media $tablet
+      width: 440px
+      margin: 0 auto 49px
+
+  &__btn
+    width: 100%
+
+    @media $tablet
+      width: 440px
+      margin: 0 auto
+
+  .btn
+    font-size: 15px
+
+    @media $tablet
+      font-size: 16px
