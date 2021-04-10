@@ -1,0 +1,30 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Том Харди'
+    - var pageClass = 'person-page'
+
+block script
+    script(src="static/js/slick.js")
+
+block content
+    .container
+        .breadcrumbs
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href='#') Главная
+                li.breadcrumbs__item
+                    a(href='#') Список страниц
+
+
+    ul
+        li
+            a(href='index.html') Главная
+        li
+            a(href='category.html') Категория
+        li
+            a(href='person.html') Персонаж
+        li
+            a(href='404.html') 404
+        li
+            a(href='not-found.html') Поиск не дал результата
