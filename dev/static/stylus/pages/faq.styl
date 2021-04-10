@@ -1,0 +1,44 @@
+.faq-page
+
+  &__wrap
+
+    @media $desktop
+      display: flex
+
+  &__menu
+    margin-bottom: 40px
+
+    @media $desktop
+      width: 278px
+      padding-right: 50px
+      margin-bottom: 0
+
+  &__content
+
+    @media $desktop
+      padding-left: 50px
+      border-left: 1px solid #828282
+
+    .heading_sub
+      margin-bottom: 40px
+
+
+  .menu
+
+    font-family: $montserrat
+    font-size: 16px
+    line-height: 19px
+    color: #979797
+    font-weight: 500
+
+    &__item
+      margin-bottom: 10px
+
+      @media $desktop
+        margin-bottom: 30px
+
+      &:last-child
+        margin-bottom: 0
+
+      &_active
+        color: $white

@@ -1,11 +1,8 @@
 extends ../layout/main
 
 block variables
-    - var title = 'Том Харди'
-    - var pageClass = 'person-page'
-
-block script
-    script(src="static/js/slick.js")
+    - var title = 'Список страниц'
+    - var pageClass = 'page'
 
 block content
     .container
@@ -30,3 +27,5 @@ block content
             a(href='not-found.html') Поиск не дал результата
         li
             a(href='search-results.html') Результаты поиска
+        li
+            a(href='faq-support.html') FAQ. Поддержка

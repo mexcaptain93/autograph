@@ -1,0 +1,39 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Поддержка'
+    - var pageClass = 'faq-page'
+
+
+block content
+    .container
+        .breadcrumbs
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href='#') Главная
+                li.breadcrumbs__item
+                    a(href='#') FAQ
+                li.breadcrumbs__item
+                    a(href='#') Поддержка
+
+        .faq-page__heading
+            .heading
+                span FAQ
+
+
+        .faq-page__wrap
+            .faq-page__menu.menu
+                ul.menu__list
+                    li.menu__item
+                        a(href='#') Политика конфиденциальности
+                    li.menu__item
+                        a(href='#') Договор оферты
+                    li.menu__item
+                        a(href='#') Вопросы и ответы
+                    li.menu__item.menu__item_active
+                        a(href='#') Поддержка
+                    li.menu__item
+                        a(href='#') Контакты
+            .faq-page__content
+                .heading.heading_sub
+                    span Поддержка
