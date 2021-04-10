@@ -16,6 +16,8 @@
   &__content
 
     @media $desktop
+      max-width: 950px
+      flex-grow: 1
       padding-left: 50px
       border-left: 1px solid #828282
 
@@ -42,3 +44,44 @@
 
       &_active
         color: $white
+
+  .form
+
+    &__list
+      margin-bottom: 30px
+
+      @media $tablet
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__item
+
+      @media $tablet
+        width: calc(50% - 15px)
+        margin-bottom: 30px
+
+      &:last-child
+        margin-bottom: 0
+
+      &_wide
+
+        @media $tablet
+          width: 100%
+
+    &__submit
+      margin-bottom: 30px
+
+    &__hint
+      font-size: 12px
+      line-height: 15px
+
+      @media $desktop
+        width: 615px
+        margin: 0 auto
+
+      a
+        color: #1D87E4
+
+      p
+        margin-bottom: 15px

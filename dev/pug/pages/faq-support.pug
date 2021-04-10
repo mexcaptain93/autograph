@@ -37,3 +37,24 @@ block content
             .faq-page__content
                 .heading.heading_sub
                     span Поддержка
+                .faq-page__form.form
+                    form
+                        .form__list
+                            .form__item
+                                .form__label
+                                    span Ваше имя *
+                                .form__input
+                                    input(type="text").input
+                            .form__item
+                                .form__label
+                                    span Ваш Email *
+                                .form__input
+                                    input(type="text").input
+                            .form__item.form__item_wide
+                                .form__input
+                                    textarea.input(placeholder='Введите ваш вопрос')
+                        .form__submit
+                            input(type="submit" value="Задать вопрос").btn
+
+                    .form__hint
+                        p Нажимая на кнопку "Заказать автограф", вы соглашаетесь с #[a(href="#") условиями использования сервиса], #[a(href="#") политикой конфиденциальности] и #[a(href="#") договором офертой].
