@@ -77,6 +77,7 @@
       width: 6px
       height: 6px
       background-image: url('../img/svg/sprite.svg#breadcrumbs_delimiter')
+      background-size cover
       background-repeat: no-repeat
       background-position: center center
       margin-left: 8px
@@ -161,6 +162,7 @@
     color $green2
     font-size 18px
     line-height 21px
+
 .howto
   counter-reset: howto
   margin-right: -16px
@@ -233,8 +235,8 @@
     align-items: center
     justify-content: center
     background-position: center center
+    background-size cover
     background-repeat: no-repeat
-    background-size: contain
     margin: 0 auto 16px
 
 
@@ -253,7 +255,6 @@
         position: absolute
         top: calc(50% - 1px)
         right: 0
-        width: 100px
         left: calc(50% + 64px)
         display: block
         width: calc(100% - 128px)
@@ -268,6 +269,7 @@
     @media $desktop
       max-width: 212px
       margin: 0 auto
+
 .heading
   margin-bottom 40px
 
