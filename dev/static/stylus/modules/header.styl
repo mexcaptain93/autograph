@@ -123,11 +123,15 @@
         left: 0
         right: 0
         bottom: 0
-        background-color: $gray2
         color: $white
+        background-color: $gray2
         padding: 64px 20px 38px 38px
         transform: translateY(-100%)
         transition all 0.4s
+
+        @media $desktop
+            background-color: transparent
+            padding-top: 73px
 
         &.hide 
             transform: translateY(0);
@@ -194,9 +198,12 @@
 
 .categories
     height 100%
+    background-color: $gray2
 
-    //@media $desktop
-    //    height auto
+    @media $desktop
+        position: relative
+        padding: 23px 40px 27px
+        max-height: 645px
 
     &__close
         position: absolute
@@ -208,9 +215,6 @@
         background-position center center
         background-size cover
         cursor pointer
-
-    &__all-btn
-        display: inline-block
 
     &__wrap
         max-height 100%
@@ -250,7 +254,7 @@
         &:first-child 
 
             .categories__heading
-                padding-right 140px
+                display: inline-block
 
     &__item
         margin-bottom: 8px
@@ -276,6 +280,12 @@
         font-family $roboto
         font-size 12px
         line-height 28px
+
+        @media $desktop
+            display: inline-block
+            vertical-align: top
+            position: static
+            margin-left: 30px
 
 .mobile-menu
     display: none

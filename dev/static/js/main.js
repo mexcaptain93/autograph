@@ -34,6 +34,15 @@ function categoriesMenuList() {
             $('.js-header-categories').toggleClass('hide')
         })
     }
+
+    $('.header__categories').on('click', function (e) {
+        if (e.target === this) {
+            e.preventDefault();
+            $('.js-header-categories').toggleClass('hide')
+        }
+    });
+
+
     if ($('.js-categories-menu-open').length) {
         $('.js-categories-menu-open').on('click', function(e) {
             e.preventDefault()
