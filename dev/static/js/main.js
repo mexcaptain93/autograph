@@ -65,8 +65,6 @@ function toggleQnA() {
         e.preventDefault();
         $(this).next('.qna__answer').slideToggle();
         $(this).parents('.qna__item').toggleClass('qna__item_opened');
-
-
     });
 }
 
@@ -118,26 +116,6 @@ function sliders() {
         });
     }
 
-    if ($('.js-slider-persons-row').length) {
-        $('.js-slider-persons-row').slick({
-            arrows: false,
-            slidesToShow: 4,
-
-            responsive: [
-                {
-                    breakpoint: 1532,
-                    settings: {
-                        slidesToShow: 1,
-                        infinite: true,
-                        variableWidth: true,
-                        autoplay: true,
-                        autoplaySpeed: 3000,
-                    }
-                }
-            ]
-
-        });
-    }
 
     if ($('.js-person-gallery').length) {
         $('.js-person-gallery').slick({

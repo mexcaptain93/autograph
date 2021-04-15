@@ -89,7 +89,8 @@
         display: none
 
 .person-card
-  display block
+  display:flex
+  flex-direction: column
   width 303px
   max-width: 100%
   outline: none
@@ -99,13 +100,14 @@
 
   &:hover
 
-    .person__photo::after
+    .person-card__photo::after
       opacity: 0
 
   &__photo
     position relative
     overflow hidden
     border-radius 5px
+    flex-grow: 1
 
 
     &::after
@@ -157,6 +159,7 @@
     padding 4px 12px
     border: 1px solid #4F4F4F
     border-radius: 10px
+    align-self: flex-start
 
     font-weight 700
     color $green2

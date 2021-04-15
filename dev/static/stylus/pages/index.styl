@@ -111,32 +111,32 @@
 
 .persons-row
     margin-bottom: 72px
-    margin-right -16px
 
     @media $desktop
         margin-bottom: 110px
 
     &__list
-        display: flex
-        overflow-y: auto
         padding-bottom: 20px
-
-        //&:after
-        //    content: ''
-        //    flex: 0 0 16px
-
-    &__item
-        margin-right: 8px
-        outline: none
+        display: grid
+        grid-template-columns 1fr
+        grid-row-gap: 32px
+        max-width: 303px
+        margin: 0 auto
 
         @media $tablet
-            margin-right: 20px
+            max-width: 627px
+            display: grid
+            grid-template-columns 1fr 1fr
+            grid-column-gap: 20px
+            grid-row-gap: 52px
 
-        @media $desktop
-            margin-right: 30px
+        @media $big_desktop
+            max-width: 100%
+            grid-template-columns: repeat(4, 1fr)
+            grid-column-gap: 30px
+            grid-row-gap: 38px
 
-        &:last-child
-            margin-right: 0
+
 
 
 .qna
