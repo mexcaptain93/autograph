@@ -61,14 +61,10 @@ function categoriesMenuList() {
 
 function toggleQnA() {
 
-    $('.qna__item_opened .qna__answer').css({'display':'block'});
-
-    $('.qna__toggler').on('click', function (e) {
+    $('.qna__question').on('click', function (e) {
         e.preventDefault();
-        let parent = $(this).parents('.qna__item');
-        let answer = parent.find('.qna__answer');
-        answer.slideToggle();
-        parent.toggleClass('qna__item_opened');
+        $(this).next('.qna__answer').slideToggle();
+        $(this).parents('.qna__item').toggleClass('qna__item_opened');
 
 
     });
