@@ -6,6 +6,7 @@ $(document).ready(function () {
     toggleQnA();
     popups();
     sliders();
+    toggleVacancies();
 });
 
 $(window).on('resize', function(){
@@ -60,11 +61,19 @@ function categoriesMenuList() {
 }
 
 function toggleQnA() {
-
     $('.qna__question').on('click', function (e) {
         e.preventDefault();
-        $(this).next('.qna__answer').slideToggle();
-        $(this).parents('.qna__item').toggleClass('qna__item_opened');
+        $(this).next('.qna__answer').slideToggle(300, function() {
+            $(this).parents('.qna__item').toggleClass('qna__item_opened');
+        });
+    });
+}
+function toggleVacancies() {
+    $('.vacancy__name').on('click', function (e) {
+        e.preventDefault();
+        $(this).next('.vacancy__descr').slideToggle(300, function() {
+            $(this).parents('.vacancy').toggleClass('vacancy_opened');
+        });
     });
 }
 

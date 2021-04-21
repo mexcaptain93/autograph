@@ -1,0 +1,54 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Вакансии'
+    - var pageClass = 'vacancies-page'
+
+block content
+    .container
+        .breadcrumbs
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a(href='#') Главная
+                li.breadcrumbs__item
+                    a(href='#') Вакансии
+
+        .heading
+            span Вакансии
+
+        .vacancies-page__container
+
+            .vacancies-page__text
+                p В нашу команду всегда требуется творческие люди! Мы предлагаем интересную работу со свободным графиком и сдельной оплатой.
+                p Рассказать о себе вы можете написав нам на почту #[a(href='mailto:work@site.ru') work@site.ru] и обязательно в письме укажите вакансию, которая вас заинтересовала. Мы рассмотрим вашу заявку и обязательно дадим обратную связь. И как только у нас появится подходящая задача, мы с радостью обратимся к вам.
+
+            .vacancies-page__list
+                .vacancy.vacancy_opened
+                    .vacancy__name
+                        span Автор статей / Копирайтер
+                        .vacancy__toggler
+                    .vacancy__descr
+                        .vacancy__descr-wrap
+                            p Ищем автора статей / копирайтера для написания материалов  в наш онлайн-журнал. Нам не важен ваш рабочий стаж. Просто присылайте написанные вами статьи с подтверждением вашего авторства. Нам интересны именно авторские статьи, а не рерайт других материалов.
+                            p Вы всегда можете предлагать свои темы для статей и делиться своими смелыми идеями. Мы приветствуем энтузиазм и самостоятельность.
+                .vacancy
+                    .vacancy__name
+                        span Веб-дизайнер
+                        .vacancy__toggler
+                    .vacancy__descr
+                        .vacancy__descr-wrap
+                            p Описание веб-дизайнера
+                .vacancy
+                    .vacancy__name
+                        span Глитч-арт художник
+                        .vacancy__toggler
+                    .vacancy__descr
+                        .vacancy__descr-wrap
+                            p Описание глитч-арт художника
+                .vacancy
+                    .vacancy__name
+                        span Frontend-разработчик
+                        .vacancy__toggler
+                    .vacancy__descr
+                        .vacancy__descr-wrap
+                            p Описание фронтенд-разработчика
