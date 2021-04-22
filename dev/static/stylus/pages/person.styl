@@ -69,6 +69,11 @@
       margin-bottom: 0
 
   &__video
+
+    @media $desktop
+      flex-grow: 1
+
+  &__video-wrap
     position: relative
     padding-top: 56.25%
     overflow: hidden
@@ -78,6 +83,7 @@
     @media $desktop
       flex-grow: 1
       margin-left: 130px
+      padding-top: calc((100% - 130px) / (16 / 9))
       margin-bottom: 0
 
     img

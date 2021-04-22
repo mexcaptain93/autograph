@@ -151,7 +151,7 @@ function playVideoOnClick() {
         e.preventDefault();
         let video = block.find('iframe');
         video.attr('src', video.attr('src') + '?autoplay=1');
-        block.removeClass('person-page__video_stopped');
+        block.removeClass('person-page__video-wrap_stopped');
     })
 }
 
