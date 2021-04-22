@@ -3,11 +3,21 @@
   .heading
     margin-bottom: 40px
 
+  &__container
+    max-width: 950px
+
   &__steps
     counter-reset: star-reg
     padding-bottom: 30px
-    mb30
+    margin-bottom: 30px
     border-bottom: 1px solid #4F4F4F
+
+    @media $tablet
+      display: flex
+      align-items: flex-start
+      overflow-y: auto
+      padding-bottom: 66px
+      margin-bottom: 47px
 
     .step
       position: relative
@@ -17,8 +27,17 @@
       min-height: 110px
       margin-bottom: 40px
 
+      @media $tablet
+        width: 418px
+        flex-shrink: 0
+        margin-right: 40px
+        margin-bottom: 0
+
       &:last-child
         margin-bottom: 0
+
+        @media $tablet
+          margin-right: 0
 
 
       &::after
@@ -44,14 +63,40 @@
 
     .form
 
+      &__list
+
+        @media $tablet
+          display: flex
+          flex-wrap: wrap
+
       &__item
         margin-bottom: 30px
+
+        @media $tablet
+          width: calc((100% - 20px) / 2)
+          margin-right: 20px
+
+        @media $desktop
+          width: calc((100% - 30px) / 2)
+          margin-right: 30px
+
+        &:nth-child(even)
+
+          @media $tablet
+            margin-right: 0
 
       &__submit
         margin-top: 40px
         margin-bottom: 20px
 
+        @media $tablet
+          margin-top: 10px
+
       &__privacy
+
+        @media $tablet
+          max-width: 710px
+          margin: 0 auto
 
         a
 
