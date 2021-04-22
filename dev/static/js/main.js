@@ -7,6 +7,7 @@ $(document).ready(function () {
     popups();
     sliders();
     toggleVacancies();
+    playVideoOnClick();
 });
 
 $(window).on('resize', function(){
@@ -137,4 +138,18 @@ function sliders() {
             mobileFirst: true,
         });
     }
+}
+
+function playVideoOnClick() {
+    let block = $('.js-person-video');
+
+    if (block.length == 0) {
+        return false
+    }
+    block.on('click', function(e) {
+        e.preventDefault();
+        let video = block.find('iframe');
+        video.attr('src', video.attr('src') + '?autoplay=1');
+        block.removeClass('person-page__video_stopped');
+    })
 }
