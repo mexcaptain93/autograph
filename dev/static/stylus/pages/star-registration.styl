@@ -1,0 +1,58 @@
+.star-registration-page
+
+  .heading
+    margin-bottom: 40px
+
+  &__steps
+    counter-reset: star-reg
+    padding-bottom: 30px
+    mb30
+    border-bottom: 1px solid #4F4F4F
+
+    .step
+      position: relative
+      display: flex
+      align-items: center
+      padding-left: 88px
+      min-height: 110px
+      margin-bottom: 40px
+
+      &:last-child
+        margin-bottom: 0
+
+
+      &::after
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        counter-increment: star-reg
+        content: counter(star-reg)
+        width: 68px
+        height: 68px
+        border-radius: 50%
+        background-color: #1e1e1e
+
+        font-size: 28px
+        line-height: 68px
+        color: $white
+        text-align: center
+        font-weight: 500
+        font-family: $montserrat
+
+  &__form
+
+    .form
+
+      &__item
+        margin-bottom: 30px
+
+      &__submit
+        margin-top: 40px
+        margin-bottom: 20px
+
+      &__privacy
+
+        a
+
+          color: #1d87e4
