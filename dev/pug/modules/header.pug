@@ -17,12 +17,14 @@ header.header
                             input(type="submit")
                         .search__reset 
                             input(type="reset")
-            .header__partnership-btn.js-popup-partnership-open
-                a(href="#") Сотрудничество
+            .header__partnership-btn
+                a(href="star-registration.html") Регистрация звезды
             .header__mobile-buttons
-                .header__btn.js-popup-partnership-open
-                    a(href="#") 
-                        img(src="/static/img/svg/sprite.svg#header-plus" alt="Сотрудничество")
+                .header__partnership-btn.header__partnership-btn_tablet
+                    a(href="star-registration.html") Регистрация звезды
+                .header__btn.header__btn_registration
+                    a(href="star-registration.html")
+                        img(src="/static/img/svg/sprite.svg#header-plus" alt="Регистрация звезды")
                 .header__btn.js-categories-menu-open
                     a(href="#")
                         img(src="/static/img/svg/sprite.svg#header-filter" alt="Категории")
