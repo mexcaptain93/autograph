@@ -120,25 +120,29 @@
         margin-bottom: 110px
 
     &__list
-        padding-bottom: 20px
         display: grid
-        grid-template-columns 1fr
+        grid-template-columns 100%
         grid-row-gap: 32px
         max-width: 303px
-        margin: 0 auto
+        margin: 0 auto 32px
 
         @media $tablet
             max-width: 627px
-            display: grid
+            margin-bottom: 44px
             grid-template-columns 1fr 1fr
             grid-column-gap: 20px
             grid-row-gap: 52px
 
         @media $big_desktop
             max-width: 100%
+            margin-bottom: 60px
             grid-template-columns: repeat(4, 1fr)
             grid-column-gap: 30px
             grid-row-gap: 38px
+
+    &__more
+        max-width: 960px
+        margin: 0 auto
 
 
 
