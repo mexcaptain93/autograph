@@ -9,20 +9,23 @@ block script
 
 
 block content
-	.container 
-		a(href='#').banner 
-			.banner__img
+	.hello
+		.hello__bg
+			.hello__video
+				video(src="/static/video/video.mp4" autoplay)
+			.hello__img
 				picture
-					source(srcset="/static/img/content/banner-big.jpg" media="(min-width: 1280px)")
-					source(srcset="/static/img/content/banner-medium.png" media="(min-width: 768px)")
-					source(srcset="/static/img/content/banner-small.jpg")
-					img(srcset="/static/img/content/banner-small.jpg" alt="title")
-			.banner__text
-				span Название стартапа - это первый в мире сервис по доставке автографов от звезд!
+					source(srcset="/static/img/content/hello_desktop.jpg" media="(min-width: 768px)")
+					source(srcset="/static/img/content/hello_tablet.jpg")
+					img(srcset="/static/img/content/hello_tablet.jpg" alt="Автограф")
+		.hello__heading
+			span Название стартапа
+		.hello__subheading
+			span это первый в мире сервис по доставке автографов от звезд!
+		.hello__btn
+			a(href="star-registration.html").btn Регистрация звезды
 
-		.heading
-			span Популярные категории:
-		
+	.container
 		.popular
 			.popular__list.js-slider-popular
 				a(href="#").popular__item 
