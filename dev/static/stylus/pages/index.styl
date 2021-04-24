@@ -360,6 +360,9 @@
     font-family: $montserrat
     text-align: center
 
+    @media $desktop
+        margin-bottom: 130px
+
     &__bg
         display: none
         position: absolute
@@ -369,12 +372,27 @@
         bottom: 0
         z-index: -1
 
-    &__heading, &__hint
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+
+        @media $tablet
+            display: block
+
+    &__heading
         margin-bottom: 30px
 
         font-size: 24px
         line-height: 30px
         font-weight: 700
+
+        @media $desktop
+            margin-bottom: 40px
+
+            font-size: 36px
+            line-height: 43px
 
     &__subheading
         margin-bottom: 40px
@@ -383,11 +401,25 @@
         line-height: 20px
         font-weight: 500
 
+        @media $desktop
+            margin-bottom: 50px
+
+            font-size: 24px
+            line-height: 30px
+
     &__hint
+        margin-bottom: 30px
+
+        font-size: 24px
+        line-height: 30px
+        font-weight: 700
         text-align: left
 
     &__input
         margin-bottom: 30px
+
+        .input
+            text-align: center
 
     &__btn
         margin-bottom: 40px
@@ -397,11 +429,28 @@
         line-height: 30px
         font-weight: 400
 
+        @media $tablet
+            display: flex
+            justify-content: center
+            align-items: center
+
     &__name
         display: block
         margin-top: 10px
 
         font-weight: 700
+
+        @media $tablet
+            margin-top: 0
+            margin-left: 30px
+
+        span
+            transition: .3s ease all
+
+    .container
+        max-width: 960px
+        box-sizing: content-box
+        margin: 0 auto
 
 
 

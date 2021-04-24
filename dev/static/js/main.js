@@ -9,6 +9,7 @@ $(document).ready(function () {
     toggleVacancies();
     playVideoOnClick();
     toTop();
+    indexSurvey();
 });
 
 $(window).on('resize', function(){
@@ -175,4 +176,25 @@ function toTop() {
     $(window).on('scroll', function (e) {
         toggleTotop();
     });
+}
+function changeNames() {
+    surveyLast = $('.js-survey-last');
+    surveyName = $('.js-survey-name span');
+    persons.push(surveyName.html());
+
+    if (persons.length & surveyLast.length) {
+        surveyLast.css({'opacity':'0'});
+        person = persons.shift();
+        setTimeout(() => {
+            surveyName.html(person);
+            surveyLast.css({'opacity':'1'});
+        }, 1000);
+
+        persons.push(person);
+        console.log(persons);
+    }
+}
+function indexSurvey() {
+    setInterval(changeNames, 5000);
+
 }

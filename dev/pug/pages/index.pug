@@ -188,9 +188,12 @@ block content
 							input.input(placeholder="Напишите имя знаменитости")
 						.survey__btn
 							input(type="submit" value="Отправить").btn
-				.survey__last
+				.survey__last.js-survey-last
 					span Последнее предложение
-					span.survey__name.js-survey-last Константин Хабенский
+					.survey__name.js-survey-name
+						span Константин Хабенский
+					script.
+						let persons = ['Владимир Ленин', 'Джиган', 'Дмитрий Медведев']
 	.container
 		.heading
 			span Вопросы и ответы:
