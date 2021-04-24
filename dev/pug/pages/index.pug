@@ -171,6 +171,27 @@ block content
 
 
 
+	.index-page__survey
+		.survey
+			.survey__bg
+				img(src="/static/img/content/survey_bg.jpg" alt="Опрос")
+			.container
+				.survey__heading
+					span У кого вы хотите заказать автограф?
+				.survey__subheading
+					span Напишите имя знаменитости, от которой вы хотите получить автограф. Мы постараемся договритсяя с вашим кумиром и разместить его на сайте.
+				.survey__form
+					form
+						.survey__hint
+							span Опрос анонимный
+						.survey__input
+							input.input(placeholder="Напишите имя знаменитости")
+						.survey__btn
+							input(type="submit" value="Отправить").btn
+				.survey__last
+					span Последнее предложение
+					span.survey__name.js-survey-last Константин Хабенский
+	.container
 		.heading
 			span Вопросы и ответы:
 		.qna
