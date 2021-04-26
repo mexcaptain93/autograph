@@ -10,6 +10,7 @@ $(document).ready(function () {
     playVideoOnClick();
     toTop();
     indexSurvey();
+    stickyFooter();
 });
 
 $(window).on('resize', function(){
@@ -198,4 +199,47 @@ function indexSurvey() {
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
+}
+
+function stickyFooter() {
+    let lastScrollTop = 0;
+    let footer = $('.js-footer');
+
+    $(window).scroll(function(event) {
+
+        function footerScroll()
+        {
+            var scroll = $(window).scrollTop();
+            var bottom = scroll + $(window).height() == $(document).height();
+
+            if (scroll < lastScrollTop || bottom) {
+                footer.fadeIn("slow")
+            }
+
+            if(scroll>20) {
+                if (scroll > lastScrollTop && !bottom) {
+                    footer.fadeOut("slow").removeClass("show");
+                }
+            }
+            else
+            {
+                footer.fadeIn("slow").addClass("show");
+            }
+
+            clearTimeout($.data(this, 'scrollTimer'));
+            $.data(this, 'scrollTimer', setTimeout(function() {
+                if (footer.is(':hover')) {
+                    footerScroll();
+                }
+                else
+                {
+                    footer.fadeOut("slow");
+                }
+            }, 2000));
+        }
+        footerScroll();
+        lastScrollTop = $(window).scrollTop();
+
+    });
+
 }
