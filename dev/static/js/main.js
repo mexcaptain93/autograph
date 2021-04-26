@@ -213,7 +213,6 @@ function stickyFooter() {
         {
             var scroll = $(window).scrollTop();
             var bottom = scroll + $(window).height() >= $(document).height();
-            console.log(scroll + $(window).height(), $(document).height())
 
             if (scroll < lastScrollTop || bottom) {
                 footer.fadeIn(500)

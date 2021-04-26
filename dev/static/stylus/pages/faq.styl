@@ -26,15 +26,27 @@
 
 
   .menu
+    border: 1px solid #434343
+    border-radius: 5px
 
     font-family: $montserrat
     font-size: 16px
-    line-height: 19px
+    line-height: 18px
     color: #979797
     font-weight: 500
+    text-align: center
+
+    &__list
+      //display: none
+
+    &__current
+      padding: 19px 38px 20px 16px
+      font-family: $roboto
+      color: $white
 
     &__item
-      margin-bottom: 10px
+      padding: 19px 38px 20px 16px
+
 
       @media $desktop
         margin-bottom: 30px
