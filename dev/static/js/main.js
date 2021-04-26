@@ -182,7 +182,7 @@ function changeNames() {
     surveyLast = $('.js-survey-last');
     surveyName = $('.js-survey-name span');
 
-    if (persons.length & surveyLast.length) {
+    if (typeof persons !== 'undefined' & surveyLast.length) {
         surveyLast.css({'opacity':'0'});
         person = persons.shift();
         persons.push(surveyName.html());
@@ -212,20 +212,21 @@ function stickyFooter() {
         function footerScroll()
         {
             var scroll = $(window).scrollTop();
-            var bottom = scroll + $(window).height() == $(document).height();
+            var bottom = scroll + $(window).height() >= $(document).height();
+            console.log(scroll + $(window).height(), $(document).height())
 
             if (scroll < lastScrollTop || bottom) {
-                footer.fadeIn("slow")
+                footer.fadeIn(500)
             }
 
-            if(scroll>20) {
+            if(scroll>80) {
                 if (scroll > lastScrollTop && !bottom) {
-                    footer.fadeOut("slow");
+                    footer.fadeOut(500);
                 }
             }
             else
             {
-                footer.fadeIn("slow");
+                footer.fadeIn(500);
             }
 
             clearTimeout($.data(this, 'scrollTimer'));
@@ -235,7 +236,7 @@ function stickyFooter() {
                 }
                 else
                 {
-                    footer.fadeOut("slow");
+                    // footer.fadeOut(500);
                 }
             }, 2000));
         }
