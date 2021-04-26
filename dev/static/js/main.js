@@ -193,13 +193,11 @@ function changeNames() {
         }, 1000);
     }
 }
+
 function indexSurvey() {
-    setInterval(changeNames, getRandomInt(getRandomInt(6000)));
+    setInterval(changeNames, 5000);
 }
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-}
 
 function stickyFooter() {
     let lastScrollTop = 0;
@@ -218,12 +216,12 @@ function stickyFooter() {
 
             if(scroll>20) {
                 if (scroll > lastScrollTop && !bottom) {
-                    footer.fadeOut("slow").removeClass("show");
+                    footer.fadeOut("slow");
                 }
             }
             else
             {
-                footer.fadeIn("slow").addClass("show");
+                footer.fadeIn("slow");
             }
 
             clearTimeout($.data(this, 'scrollTimer'));
