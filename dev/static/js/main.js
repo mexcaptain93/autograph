@@ -203,6 +203,10 @@ function stickyFooter() {
     let lastScrollTop = 0;
     let footer = $('.js-footer');
 
+    if ($(window).width() < 768) {
+        return false;
+    }
+
     $(window).scroll(function(event) {
 
         function footerScroll()
