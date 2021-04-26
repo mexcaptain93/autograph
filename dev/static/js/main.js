@@ -180,21 +180,22 @@ function toTop() {
 function changeNames() {
     surveyLast = $('.js-survey-last');
     surveyName = $('.js-survey-name span');
-    persons.push(surveyName.html());
 
     if (persons.length & surveyLast.length) {
         surveyLast.css({'opacity':'0'});
         person = persons.shift();
+        persons.push(surveyName.html());
+
         setTimeout(() => {
             surveyName.html(person);
             surveyLast.css({'opacity':'1'});
         }, 1000);
-
-        persons.push(person);
-        console.log(persons);
     }
 }
 function indexSurvey() {
-    setInterval(changeNames, 5000);
+    setInterval(changeNames, getRandomInt(getRandomInt(6000)));
+}
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
