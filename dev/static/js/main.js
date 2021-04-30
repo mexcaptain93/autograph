@@ -11,6 +11,7 @@ $(document).ready(function () {
     toTop();
     indexSurvey();
     stickyFooter();
+    faqMobileMenu();
 });
 
 $(window).on('resize', function(){
@@ -244,4 +245,14 @@ function stickyFooter() {
 
     });
 
+}
+
+function faqMobileMenu() {
+    if ($('.js-faq-menu').length) {
+        $('.js-faq-menu-current').on('click', function (e) {
+            e.preventDefault();
+            $('.js-faq-menu').toggleClass('opened');
+            $('.js-faq-menu-list').slideToggle();
+        })
+    }
 }

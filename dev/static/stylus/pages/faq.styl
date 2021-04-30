@@ -10,7 +10,7 @@
 
     @media $desktop
       width: 278px
-      padding-right: 50px
+      margin-right: 50px
       margin-bottom: 0
 
   &__content
@@ -36,17 +36,42 @@
     font-weight: 500
     text-align: center
 
+    @media $desktop
+      border: none
+      text-align: left
+
     &__list
-      //display: none
+      display: none
+
+      @media $desktop
+        display: block
 
     &__current
+      position: relative
+      cursor: pointer
       padding: 19px 38px 20px 16px
+
       font-family: $roboto
       color: $white
 
-    &__item
-      padding: 19px 38px 20px 16px
+      @media $desktop
+        display: none
 
+      i
+        display: block
+        background-image: url('../img/svg/sprite.svg#select_arrow')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        width: 12px
+        height: 7px
+        position: absolute
+        top: calc(50% - 4px)
+        right: 16px
+        transition: .3s ease transform
+
+
+    &__item
 
       @media $desktop
         margin-bottom: 30px
@@ -56,6 +81,27 @@
 
       &_active
         color: $white
+
+      a
+        display: block
+        padding: 19px 38px 20px 16px
+
+        @media $desktop
+          padding: 0
+
+      &:hover
+        background-color: #0f0f0f
+
+        color: $white
+
+    &.opened
+
+      .menu
+
+        &__current
+
+          i
+            transform: rotate(180deg)
 
   .form
 
