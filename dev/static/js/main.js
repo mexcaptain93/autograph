@@ -220,7 +220,7 @@ function stickyFooter() {
                 footer.fadeIn(500)
             }
 
-            if(scroll>80) {
+            if(scroll>250) {
                 if (scroll > lastScrollTop && !bottom) {
                     footer.fadeOut(500);
                 }
