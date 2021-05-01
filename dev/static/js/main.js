@@ -12,6 +12,7 @@ $(document).ready(function () {
     indexSurvey();
     stickyFooter();
     faqMobileMenu();
+    selects();
 });
 
 $(window).on('resize', function(){
@@ -255,4 +256,15 @@ function faqMobileMenu() {
             $('.js-faq-menu-list').slideToggle();
         })
     }
+}
+
+function selects() {
+    if ($('.js-select-support').length) {
+        $('.js-select-support').select2({
+            placeholder: 'Выберите тему обращения',
+            width: '100%',
+            minimumResultsForSearch: Infinity
+        });
+    }
+
 }

@@ -304,6 +304,7 @@
   -webkit-box-shadow: none
   -moz-box-shadow: none
   box-shadow: none
+  outline: none
 
   width: 100%
   padding: 17px 16px
@@ -318,6 +319,12 @@
 
   &::placeholder
     color: #828282
+
+  &_error
+    border: 1px solid #F02B2B
+
+  &:focus
+    box-shadow: inset 0 15px 20px rgba(0, 0, 0, 0.45)
 
 .btn
   border: none
@@ -399,5 +406,61 @@
       background-size: cover
       background-position: center center
 
+//select2
 
+.select2-dropdown, .select2-selection--single
+  text-align: center
+  font-size: 16px
+  line-height: 19.5px
+  font-family: $montserrat
+  color: #979797
+  background-color: $black !important
+  margin-top: -4px
+  border: 1px solid #434343 !important
+  border-top: none !important
 
+.select2-selection--single
+  padding: 19px 38px 20px 16px
+  height: auto !important
+  border: 1px solid #434343 !important
+  border-radius: 5px !important
+
+.select2-results__options
+  max-height: none !important
+
+.select2-results__option--highlighted, .select2-results__option--selected
+  background-color: #0F0F0F !important
+  color: $white
+
+.select2-results__option
+  padding: 19px 38px 20px 16px
+
+.select2-selection__rendered
+  font-family: $roboto
+  font-weight: 500
+  color: $white !important
+  line-height: 19.5px !important
+
+.select2-container--open .select2-selection--single
+  border-bottom: none !important
+
+.select2-selection__arrow
+  height: 100% !important
+
+.select2-selection__arrow b
+  display: block
+  background-image: url('../img/svg/sprite.svg#select_arrow')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  width: 12px !important
+  height: 7px !important
+  position: absolute !important
+  top: calc(50% - 4px) !important
+  right: 16px !important
+  transition: .3s ease transform
+  border: none !important
+  left: auto !important
+
+.select2-container--open .select2-selection__arrow b
+  transform: rotate(180deg)

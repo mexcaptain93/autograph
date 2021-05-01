@@ -4,6 +4,9 @@ block variables
     - var title = 'Поддержка'
     - var pageClass = 'faq-page'
 
+block script
+    script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
+
 
 block content
     .container
@@ -12,31 +15,15 @@ block content
                 li.breadcrumbs__item
                     a(href='#') Главная
                 li.breadcrumbs__item
-                    a(href='#') FAQ
-                li.breadcrumbs__item
-                    a(href='#') Поддержка
+                    a(href='#') Компания
 
         .faq-page__heading
             .heading
-                span FAQ
+                span Компания
 
 
         .faq-page__wrap
-            .faq-page__menu.menu.js-faq-menu
-                .menu__current.js-faq-menu-current
-                    span Список разделов
-                    i
-                ul.menu__list.js-faq-menu-list
-                    li.menu__item
-                        a(href='#') Политика конфиденциальности
-                    li.menu__item
-                        a(href='#') Договор оферты
-                    li.menu__item
-                        a(href='#') Вопросы и ответы
-                    li.menu__item.menu__item_active
-                        a(href='#') Поддержка
-                    li.menu__item
-                        a(href='#') Контакты
+            include ../modules/company_menu
             .faq-page__content
                 .heading.heading_sub
                     span Поддержка
@@ -47,17 +34,28 @@ block content
                                 .form__label
                                     span Ваше имя *
                                 .form__input
-                                    input(type="text").input
+                                    input(type="text").input.input_error
                             .form__item
                                 .form__label
                                     span Ваш Email *
                                 .form__input
                                     input(type="text").input
                             .form__item.form__item_wide
+                                select.js-select-support
+                                    option()
+                                    option(value='1') Тема обращения № 1
+                                    option(value='1') Тема обращения № 2
+                                    option(value='1') Тема обращения № 3
+                                    option(value='1') Тема обращения № 4
+                            .form__item.form__item_wide
                                 .form__input
-                                    textarea.input(placeholder='Введите ваш вопрос')
+                                    textarea.input(placeholder='Напишите ваш вопрос')
                         .form__submit
                             input(type="submit" value="Задать вопрос").btn
 
-                    .form__hint
-                        p Нажимая на кнопку "Заказать автограф", вы соглашаетесь с #[a(href="#") условиями использования сервиса], #[a(href="#") политикой конфиденциальности] и #[a(href="#") договором офертой].
+                    .form__privacy
+                        .checkbox
+                            input(type="checkbox" id="privacy")
+                            label(for="privacy") Нажимая на кнопку "Заказать автограф", вы соглашаетесь с #[a(href="#") условиями использования сервиса], #[a(href="#") политикой конфиденциальности] и #[a(href="#") договором офертой.]
+
+
