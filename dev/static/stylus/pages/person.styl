@@ -10,6 +10,8 @@
 
     @media $desktop
       width: 574px
+      display: flex
+      flex-direction: column
 
   &__verified
     display: flex
@@ -59,6 +61,9 @@
     line-height: 25px
     color: #f2f2f2
 
+    @media $desktop
+      flex-grow: 1
+
   &__order
     margin-bottom: 60px
 
@@ -67,6 +72,7 @@
 
     @media $desktop
       margin-bottom: 0
+      max-width: 341px
 
   &__video
 
@@ -83,7 +89,7 @@
     @media $desktop
       flex-grow: 1
       margin-left: 130px
-      padding-top: calc((100% - 130px) / (16 / 9))
+      padding-top: calc((100% - 130px)/(796 / 394))
       margin-bottom: 0
 
     img
@@ -317,6 +323,7 @@
 
             @media $desktop
               margin-bottom: 30px
+              text-align: center
 
       &__hint
         font-size: 12px
