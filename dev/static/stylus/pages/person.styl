@@ -228,9 +228,11 @@
 
       &__list
         display: flex
-        justify-content: center
         width: 100%
         overflow-y: auto
+
+        @media $tablet
+          justify-content: center
 
         &::after
           content: ''
