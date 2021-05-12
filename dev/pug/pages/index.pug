@@ -53,33 +53,7 @@ block content
 						img(src="/static/img/content/popular-5.jpg" alt="Фантастика")
 					.popular__name 
 						span Фантастика
-		.index-page__howto
-			.heading
-				span Как заказать автограф:
-
-			.howto
-				.howto__list.scrollbar
-					.howto__item
-						.howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-1');" )
-						.howto__text
-							span Заполните форму обратной связи и оплатите заказ
-					.howto__item
-						.howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-2');" )
-						.howto__text
-							span Отправьте вашу вещь в наш сортировочный центр
-					.howto__item
-						.howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-3');" )
-						.howto__text
-							span Знаменитость оставит автограф
-					.howto__item
-						.howto__digit(style="background-image: url('/static/img/svg/sprite.svg#howto-4');" )
-						.howto__text
-							span Мы вернем вещь с автографом на указанный вами адрес
-
 		.index-page__persons
-			.heading
-				span Популярные знаменитости:
-
 			.persons-row
 				.persons-row__list
 					.persons-row__item
@@ -166,35 +140,54 @@ block content
 
 
 
+					.persons-row__item
+						a(href="#").person-card
+							.person-card__photo
+								img(src="/static/img/content/person-5.jpg" alt="Оливия Джейнис Кокбернонтрабандист")
+							.person-card__name
+								span Оливия Джейнис Кокбернонтрабандист
+							.person-card__position
+								span Актер, режиссер, сценарист, оператор, гример, сценарист, оператор, гример
+							.person-card__price
+								span ₽ 150 000
+					.persons-row__item
+						a(href="#").person-card
+							.person-card__photo
+								img(src="/static/img/content/person-6.jpg" alt="Оливия Джейнис Кокбернонтрабандист")
+							.person-card__name
+								span Оливия Джейнис Кокбернонтрабандист
+							.person-card__position
+								span Актер, режиссер, сценарист, оператор, гример, сценарист, оператор, гример
+							.person-card__price
+								span ₽ 150 000
+					.persons-row__item
+						a(href="#").person-card
+							.person-card__photo
+								img(src="/static/img/content/person-7.jpg" alt="Оливия Джейнис Кокбернонтрабандист")
+							.person-card__name
+								span Оливия Джейнис Кокбернонтрабандист
+							.person-card__position
+								span Актер, режиссер, сценарист, оператор, гример, сценарист, оператор, гример
+							.person-card__price
+								span ₽ 150 000
+					.persons-row__item
+						a(href="#").person-card
+							.person-card__photo
+								img(src="/static/img/content/person-8.jpg" alt="Оливия Джейнис Кокбернонтрабандист")
+							.person-card__name
+								span Оливия Джейнис Кокбернонтрабандист
+							.person-card__position
+								span Актер, режиссер, сценарист, оператор, гример, сценарист, оператор, гример
+							.person-card__price
+								span ₽ 150 000
+
+
+
 				.persons-row__more
 					a(href='#').btn.btn_gray Загрузить ещё
 
 
 
-	.index-page__survey
-		.survey
-			.survey__bg
-				img(src="/static/img/content/survey_bg.jpg" alt="Опрос")
-			.container
-				.survey__heading
-					span У кого вы хотите заказать автограф?
-				.survey__subheading
-					span Напишите имя знаменитости, от которой вы хотите получить автограф. Мы постараемся договритсяя с вашим кумиром и разместить его на сайте.
-				.survey__form
-					form
-						.survey__hint
-							span Опрос анонимный
-						.survey__input
-							input.input(placeholder="Напишите имя знаменитости")
-						.survey__btn
-							input(type="submit" value="Отправить").btn
-				.survey__last.js-survey-last
-					span Последнее предложение
-					.survey__name.js-survey-name
-						span Константин Хабенский
-					script.
-						let persons = ['Владимир Ленин', 'Джиган', 'Дмитрий Медведев']
-	.container
 		.heading
 			span Вопросы и ответы:
 		.qna

@@ -106,6 +106,11 @@ function popups() {
         e.preventDefault();
         $('.js-mobile-menu').slideUp();
     });
+
+    $('.js-popup-add-review-opener').on('click', function (e) {
+        e.preventDefault();
+        $('.js-popup-add-review').css({'display':'flex'});
+    });
 }
 
 function sliders() {

@@ -140,6 +140,23 @@
             grid-column-gap: 30px
             grid-row-gap: 38px
 
+    &__item
+        display: none
+
+        &:nth-child(-n+4)
+            display: block
+
+        &:nth-child(-n+8)
+
+            @media $tablet
+                display: block
+
+        &:nth-child(-n+12)
+
+            @media $big_desktop
+                display: block
+
+
     &__more
         max-width: 960px
         margin: 0 auto
@@ -196,17 +213,21 @@
                 &__answer
                     display: block
 
-
-
     &__question
+        display: flex
+        align-items: center
         position: relative
-        padding: 41px 75px 41px 18px
+        padding: 9px 74px 10px 24px
         border-radius: 5px
         background-color: $gray2
         cursor: pointer
+        min-height: 94px
 
         @media $tablet
-            padding: 52px 96px 52px 18px
+            padding: 21px 88px 21px 32px
+
+        @media $desktop
+            padding-left: 24px
 
     &__toggler
         position: absolute
@@ -239,7 +260,7 @@
 
     &__answer
         display: none
-        padding: 14px 6px 14px 18px
+        padding: 12px 24px
         margin-top: 8px
         margin-bottom: 1px
         border: 1px solid #1D1D1D
@@ -251,13 +272,13 @@
 
         @media $desktop
             margin-top: 8px
-            padding: 26px 51px
+            padding: 8px 24px 9px
 
 
     &__answer-wrap
 
         @media $desktop
-            min-height: 50px
+            min-height: 85px
             display: flex
             align-items: center
 

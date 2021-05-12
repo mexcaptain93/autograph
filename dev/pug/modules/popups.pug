@@ -1,21 +1,20 @@
-.popup.partnership.js-popup-partnership
+.popup.add-review.js-popup-add-review
     .popup__overlay
     .popup__wrap
         .popup__close
         .popup__heading.heading
-            span Заявка на сотрудничество
+            span Оставить отзыв
         .partnership__form.form
             .form__list
                 .form__item
-                    input(type="text" placeholder="ФИО *").input
+                    input(type="text" placeholder="Ваше имя").input
                 .form__item
-                    input(type="text" placeholder="Ваш Email *").input
+                    input(type="text" placeholder="Ваш эл. адрес").input
                 .form__item
-                    input(type="text" placeholder="Ваш телефон *").input
-                .form__item
-                    textarea(placeholder="Ваш комментарий" rows="6").input
+                    textarea(placeholder="Текст" rows="6").input
             .form__submit
                 input(type="submit" value="Отправить").btn
-        .partnership__hint
-            p Нажимая кнопку “Принять условия и отправить заявку”, вы соглашаетесь с  #[a «Политикой конфиденциальности»] и #[a(href="#") «Условиями использования»]
-
+            .form__privacy
+                .checkbox
+                    input(type="checkbox" id="privacy_add_review")
+                    label(for="privacy_add_review") Нажимая на кнопку "Заказать автограф", вы соглашаетесь с #[a(href="#") условиями использования сервиса], #[a(href="#") политикой конфиденциальности] и #[a(href="#") договором офертой.]
