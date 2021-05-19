@@ -276,6 +276,9 @@ function selects() {
 }
 
 function toggleMobileSearch() {
+    if ($(window).width() >=768) {
+        return false
+    }
     const search = $('.js-mobile-search')
 
     let didScroll
