@@ -30,12 +30,12 @@ block content
                                 .form__label
                                     span Ваше имя *
                                 .form__input
-                                    input(type="text").input.input_error
+                                    input(type="text" placeholder="Введите имя").input.input_error
                             .form__item
                                 .form__label
                                     span Ваш Email *
                                 .form__input
-                                    input(type="text").input
+                                    input(type="text" placeholder="Введите Email").input
                             .form__item.form__item_wide
                                 .form__input
                                     textarea.input(placeholder='Напишите ваш вопрос')
@@ -44,8 +44,8 @@ block content
 
                     .form__privacy
                         .checkbox
-                            input(type="checkbox" id="privacy")
-                            label(for="privacy") Нажимая на кнопку "Заказать автограф", вы соглашаетесь с #[a(href="#") условиями использования сервиса], #[a(href="#") политикой конфиденциальности] и #[a(href="#") договором офертой.]
+                            input(type="checkbox" checked id="privacy")
+                            label(for="privacy") Нажимая на кнопку "Заказать автограф", вы соглашаетесь с #[a(href="#") условиями использования сервиса], #[a(href="#") политикой конфиденциальности] и #[a(href="#") офертой.]
                 .faq-page__qna
                     .qna
                         .qna__list
