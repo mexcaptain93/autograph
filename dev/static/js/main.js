@@ -14,6 +14,7 @@ $(document).ready(function () {
     faqMobileMenu();
     selects();
     toggleMobileSearch()
+    notification()
 });
 
 $(window).on('resize', function(){
@@ -314,4 +315,40 @@ function toggleMobileSearch() {
 
         lastScrollTop = st
     }
+}
+
+function notification() {
+    let notification = $('.js-notification'),
+        sender = $('.js-send'),
+        closer = $('.js-notification-close'),
+        headingElement = $('.js-notification-heading'),
+        textElement = $('.js-notification-text'),
+        heading = 'Заявка отправлена',
+        text = '<b>Ваша заявка</b> на развещение проекта отправлена, мы с вами свяжемся.'
+
+    let notificationTimer
+
+
+    sender.on('click', (e) => {
+        e.preventDefault()
+
+        headingElement.html(heading)
+        textElement.html(text)
+
+        notification.slideDown()
+
+        notificationTimer= setTimeout(() => {
+            notification.slideUp()
+        }, 3000)
+
+    })
+
+
+
+    closer.on('click', (e) => {
+        e.preventDefault()
+        notification.slideUp()
+        clearTimeout(notificationTimer)
+
+    })
 }
