@@ -10,9 +10,10 @@ $(document).ready(function () {
     playVideoOnClick();
     toTop();
     indexSurvey();
-    stickyFooter();
+    // stickyFooter();
     faqMobileMenu();
     selects();
+    toggleMobileSearch()
 });
 
 $(window).on('resize', function(){
@@ -272,4 +273,42 @@ function selects() {
         });
     }
 
+}
+
+function toggleMobileSearch() {
+    const search = $('.js-mobile-search')
+
+    let didScroll
+    let lastScrollTop = 0
+    let delta = 50
+
+    $(window).scroll(function(e){
+        didScroll = true
+    })
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled()
+            didScroll = false
+        }
+    }, 250)
+
+    function hasScrolled() {
+        let st = $(this).scrollTop()
+
+        if(Math.abs(lastScrollTop - st) <= delta)
+            return;
+
+        if (st > lastScrollTop){
+            // Scroll Down
+            search.slideUp()
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                search.slideDown()
+            }
+        }
+
+        lastScrollTop = st
+    }
 }
