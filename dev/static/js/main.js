@@ -129,7 +129,7 @@ function sliders() {
                         slidesToShow: 1,
                         infinite: true,
                         variableWidth: true,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 3000,
                     }
                 }
@@ -277,7 +277,7 @@ function selects() {
 }
 
 function toggleMobileSearch() {
-    if ($(window).width() >=768) {
+    if ($(window).width() >=768 || $(window).height() * 1.3 > $(document).height() ) {
         return false
     }
     const search = $('.js-mobile-search')
