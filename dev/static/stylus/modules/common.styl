@@ -94,6 +94,7 @@
   width 303px
   max-width: 100%
   outline: none
+  height: 100%
 
   @media $desktop
     width: 352px
@@ -120,6 +121,12 @@
       transition: .3s ease all
       opacity 1
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.2%, #000000 100%)
+
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+      object-position: center
 
   &__name
     margin-bottom 14px
